@@ -1,11 +1,20 @@
 package section4.factory;
 
+import section4.factory.ingredients.PizzaIngredientFactory;
+
 public class ChicagoStyleCheesePiza extends Pizza {
-    public ChicagoStyleCheesePiza() {
-        name = "シカゴスタイルのディープディッシュチーズピザ";
-        dough = "極厚クラスト生地";
-        sauce = "プラムトマトソース";
-        toppings.add("シュレッドモッツアレラチーズ");
+    PizzaIngredientFactory ingredientFactory;
+    public ChicagoStyleCheesePiza(PizzaIngredientFactory ingredientFactory) {
+        this.ingredientFactory = ingredientFactory;
+    }
+
+    @Override
+    void prepare() {
+        System.out.println(name + "を下準備");
+        dough = ingredientFactory.createDough();
+        sauce = ingredientFactory.createSauce();
+        cheese = ingredientFactory.createCheese();
+        clam = ingredientFactory.createClam();
     }
 
     @Override

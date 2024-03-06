@@ -8,7 +8,8 @@ public class PizzaTestDrive {
         Pizza nyPizza = nyStore.orderPizza("チーズ");
         System.out.println("イーサンの注文は" + nyPizza.getName() + "\n");
 
-        Pizza chicagoPizza = chicagoStore.orderPizza("チーズ");
-        System.out.println("ジョエルの注文は" + chicagoPizza.getName() + "\n");
+        // TODO: ChicagoPizzaStore修正後
+//        Pizza chicagoPizza = chicagoStore.orderPizza("チーズ");
+//        System.out.println("ジョエルの注文は" + chicagoPizza.getName() + "\n");
     }
 }
