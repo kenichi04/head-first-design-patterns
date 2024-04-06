@@ -1,23 +1,29 @@
 package section6.command;
 
 public class GarageDoor {
+    String location;
+
+    public GarageDoor(String location) {
+        this.location = location;
+    }
+
     public void up() {
-        System.out.println("Garage Door is Open");
+        System.out.println(location + " garage Door is Open");
     }
 
     public void down() {
-        System.out.println("Garage Door is Closed");
+        System.out.println(location + " garage Door is Closed");
     }
 
     public void stop() {
-        System.out.println("Garage Door is Stopped");
+        System.out.println(location + " garage Door is Stopped");
     }
 
     public void lightOn() {
-        System.out.println("Garage light is on");
+        System.out.println(location + " garage light is on");
     }
 
     public void lightOff() {
-        System.out.println("Garage light is off");
+        System.out.println(location + " garage light is off");
     }
 }
